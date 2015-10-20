@@ -1,10 +1,28 @@
 // Constructors
 // Only add code to *THIS* section!
 
-///
-///
-///
-///
+
+let Dog = function (params1) {
+    params1 = params1 || {};
+    this.color  = params1.color;
+    this.hungry = (params1.hungry !==undefined)? params1.hungry : true;
+    this.status = params1.status || "normal";
+}
+
+let Human = function (params2) {
+    params2 = params2 || {};
+    this.cool  = (params2.cool !== undefined)? params2.cool : false;
+    this.feed  = function(x){
+         x.hungry= false;
+    };
+    this.owner = params2.owner;
+    this.pet   = function(y){
+        return y.status ="happy";
+    }; 
+  
+}
+
+
 
 // Do not ADD or MODIFY code below this line :)
 // Dogs
